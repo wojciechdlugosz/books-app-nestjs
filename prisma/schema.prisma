@@ -14,7 +14,7 @@ model Author {
   id String @id @default(uuid())
   name String @unique
   country String 
-  book Book[]
+  books Book[]
 }
 
 model Book {
@@ -43,7 +43,7 @@ model User {
   role     Role      @default(USER)
   password Password?
 
-  users UserOnBooks[]
+  books UserOnBooks[]
 }
 
 model Password {
